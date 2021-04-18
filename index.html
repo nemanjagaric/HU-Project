@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HU</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;1,200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ea0ee3455e.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Raleway', sans-serif;
+        background-color: #f47e3ebd;
+        background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        text-align: center;
+        color: white;
+        background-color: #f47e3ebd;
+        left: -100%;
+        padding: 0 0 0 10px;
+    }
+    header div {
+        line-height: 58px;
+        font-size: 0.83em;
+    }
+    header div a {
+        padding: 5px 10px;
+    }
+    header div a:link {
+        text-decoration: none;
+        color: white;
+    }
+    header div a:visited {
+        color: white;
+    }
+    header div a:hover {
+        border-bottom: 1px solid white;
+        transition: 1.5s ease;
+    }
+    header div a:active{
+        color: white;
+    }
+    .flyingHeader {
+        position: fixed;
+        top: 0;
+        transition: 0.5s ease;
+        left: 0;
+    }
+    .p{
+        width: 50%;
+        margin: 0 auto;
+        opacity: 0;
+        transition: 1.5s ease;
+        text-align: center;
+        color: #f47e3ebd;
+        background-color: white;
+    }
+    .flying {
+        margin: 20px auto;
+        width: 75%;
+        transition: 1s ease;
+        background-color: #f47e3ebd;
+        opacity: 1;
+        text-align: center;
+        border-radius: 10px;
+        color: white; 
+        box-shadow: 9px 4px 24px 0px #000000a9;
+        padding: 10px;
+    }
+    #heroSection {
+        text-align: center;
+        background-image: url(./166719356_127181476082490_5881049327626121667_n.jpg);
+        background-attachment: fixed;
+    }
+    #heroSection img {
+        width: 290px;
+        height: 290px;
+        border-radius: 50%;
+        margin: 130px 0;
+        opacity: 0.8;
+    }
+    footer{
+        width: 100%;
+        text-align: center;
+        color: white;
+        background-color: #f47e3ebd;
+        padding: 1px 0;
+        font-size: 12px;
+    }
+</style>
+<body>
+
+    <header id="header" class="header">
+        
+        <h5>HU - Holističko Udruženje</h5>
+
+        <div>
+            <a href="#aboutSection">About</a>
+            <a href="#contactSection">Contact</a>
+        </div>
+
+    </header>
+
+    <section id="heroSection">
+        <img src="./150259951_103570421776929_2724077694020280376_n.jpg" alt="heroImg">
+    </section>
+
+    <section id="aboutSection" class="p">
+
+        <h2>ABOUT US</h2>
+
+        <p >Udruženje za djecu & odrasle.
+            Aktivnosti u manjim grupama i 1na1.
+            Razne tehnike iscjeljivanja.
+            Cilj: Razvoj kreativnosti, koordinacije, koncentracije, intuicije, empatije, samopouzdanja, transformacije, discipline.</p>
+
+    </section>
+
+    <section id="contactSection" class="p">
+        <h2>CONTACT</h2>
+        <p>
+            <div><i class="fas fa-phone-alt"></i>  :   +387 61 245 678</div>
+            <div><i class="fas fa-envelope"></i>  :   aidahrnjica@gmail.com</div>
+            <div><i class="fab fa-viber"></i>  :   +387 61 245 678</div>
+        </p>
+        
+
+    </section>
+
+    <footer>
+        <p>Copyright <i class="far fa-copyright"></i> HU - Holističko Udruženje</p>
+    </footer>
+
+    
+    
+
+    <script>
+
+        var header = document.getElementById("header");
+
+        var myFunc = function () {
+            let y = window.scrollY;
+            y>=1 ? header.className = "header flyingHeader" : header.className = "header";
+            
+        }
+
+        window.addEventListener("scroll", myFunc);
+
+        var p = document.querySelectorAll(".p");
+        var hero = document.getElementById("heroSection");
+        var heroHeight = hero.clientHeight;
+
+        for (let i = 0; i < p.length; i++) {
+            var pFunc = () => {
+            let x = window.scrollY;
+            x> heroHeight - 350 ? p[i].className = "flying" : p[i].className = "p";
+        }
+
+        
+        window.addEventListener("scroll", pFunc);
+        }
+       
+        
+
+        
+
+    </script>
+    
+</body>
+</html>
