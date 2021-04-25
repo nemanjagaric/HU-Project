@@ -98,7 +98,17 @@
         top: 0;
         transition: 0.5s ease;
         left: 0;
+        background-color: #f47e3e;
+        color: white;
+        z-index: 1000;
     }
+    #mobileIcon {
+        display: none;
+        line-height: 59px;
+        padding: 0 20px 0 0;
+        cursor: pointer;
+        color: white;
+        }
     .p{
         width: 50%;
         margin: 0 auto;
@@ -133,6 +143,25 @@
         margin: 130px 0;
         opacity: 0.8;
     }
+    .grid-container-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.15fr 0.5fr;
+  gap: 10px 0px;
+  grid-template-areas:
+    "image image image image"
+    "text text text text";
+}
+.image { 
+    grid-area: image;
+     }
+.image img {
+        width: 80%;
+    }
+.text { grid-area: text; }
+.text p {
+    font-size: 14px;
+}
   
    footer{
         width: 100%;
@@ -158,12 +187,35 @@
     footer  a:active {
         color: white;
     }
-    @media screen and (max-width: 375px){
+    @media screen and (min-width: 650px ) and (max-width: 970px ){
+        .grid-container {
+            grid-template-columns: 0.15fr 0.15fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 2px 0px;
+            grid-template-areas:
+            "title title"
+            "phone-icon phone about-us"
+            "mail-icon mail about-us"
+            "whatzup-icon whatzup about-us";
+}
+.about-us { 
+    grid-area: about-us;
+    text-align: center;
+    padding: 15px;
+    border-left: none; 
+    font-size: 0.7em;}
+    
+    .text p {
+        font-size: 10px;
+    }
+    }
+    @media screen and (max-width: 650px){
         #mobileIcon {
         display: block;
         line-height: 59px;
         padding: 0 20px 0 0;
         cursor: pointer;
+        color: white;
         }
         #mobileNav {
             display: block;
@@ -175,7 +227,7 @@
             color: #f47e3ebd;
             text-align: center;
             padding: 40px 0;
-            z-index: 100;
+            z-index: 10000;
             border-radius: 10px 0 10px 10px;
         }
         #mobileNav a {
@@ -211,7 +263,12 @@
     grid-area: about-us;
     text-align: center;
     padding: 15px;
-    border-left: none; }
+    border-left: none; 
+    font-size: 0.7em;}
+    
+    .text p {
+        font-size: 10px;
+    }
 
     }
    
@@ -238,12 +295,29 @@
     </div>
 
     <section id="heroSection">
-        <img src="./150259951_103570421776929_2724077694020280376_n.jpg" alt="heroImg">
+        <img width="80%" src="./150259951_103570421776929_2724077694020280376_n.jpg" alt="heroImg">
     </section>
 
     <section id="aboutSection" class="p">
 
-        
+        <div class="grid-container-text">
+            <div class="image">
+                <img src="./177442387_138228531644451_8076211542833906296_n.jpg" alt="imgp">
+            </div>
+            <div class="text">
+                <p>SHIATSU MASAŽA najbolja je za ljude koji se žele osjećati opušteno i ublažiti stres, bol i napetost. To je japanska vrsta masaže koja promovira emocionalnu i fizičku smirenost i opuštanje. pomaže u ublažavanju stresa, anksioznosti i depresije.
+                    Shiatsu je oblik masažne terapije, gdje se nježno vrši pritisak vrhovima prstiju na određenim dijelovima tijela.
+                    Shiatsu poboljšava vaše razmišljanje i općeniti osjećaj dobrobiti.
+                    Pozitivan stav prema životu može napraviti veliku razliku u tome kako se osjećamo i kako se nosimo sa izazovima. Shiatsu vam pomaže da se osjećate ugodno sa samim sobom, baš onakvima kakvi jeste!
+                    ☎️ Zakažite termin i priuštite sebi potpuni ugođaj shiatzu masaže na + 387 61 245 678
+                    …….
+                    SHIATSU MASSAGE is best for people who want to feel relaxed and relieve stress, pain, and tension. It's a Japanese type of massage that: promotes emotional and physical calm and relaxation. helps to relieve stress, anxiety, and depression.
+                    Shiatsu is a form of massage therapy, where pressure is applied gently through a therapist’s
+                    fingertips to specific parts of the body.
+                    Shiatsu improves your thinking and general sense of well-being. A positive attitude toward life can make a huge difference in how we feel and how we handle challenges. Shiatsu helps you to feel comfortable with you, just the way you are!
+                    ☎️ Make an appointment and treat yourself to the full luxury of a shiatsu massage at + 387 61 245 678</p>
+            </div>
+          </div>
 
         
 
