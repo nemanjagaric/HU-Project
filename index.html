@@ -5,283 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HU</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ea0ee3455e.js" crossorigin="anonymous"></script>
 </head>
 
-<style>
-    body {
-        margin: 0;
-        box-sizing: border-box;
-        font-family: 'Prompt', sans-serif;
-        background-color: #f47e3ebd;
-        background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
-    }
-    .header {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        text-align: center;
-        color: white;
-        background-color: #f47e3ebd;
-        left: -100%;
-        padding: 0 0 0 10px;
-    }
-    header nav {
-        line-height: 58px;
-        font-size: 0.83em;
-    }
-    header nav a {
-        padding: 5px 10px;
-    }
-    header nav a:link {
-        text-decoration: none;
-        color: white;
-    }
-    header nav a:visited {
-        color: white;
-    }
-    header nav a:hover {
-        border-bottom: 1px solid white;
-        transition: 1.5s ease;
-    }
-    header nav a:active{
-        color: white;
-    }
-    #mobileIcon {
-        display: none;
-    }
-    #mobileNav {
-        display: none;
-    }
-    .grid-container {
-  display: grid;
-  grid-template-columns: 0.35fr 0.35fr 4fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 10px 30px;
-  grid-template-areas:
-    "title title title"
-    "phone-icon phone about-us"
-    "mail-icon mail about-us"
-    "whatzup-icon whatzup about-us";
-}
-.phone-icon { 
-    grid-area: phone-icon;
-    line-height: 70px; }
-.mail-icon { 
-    grid-area: mail-icon;
-    line-height: 70px; }
-.whatzup-icon { 
-    grid-area: whatzup-icon;
-    line-height: 70px; }
-.phone { 
-    grid-area: phone;
-    line-height: 70px; }
-.mail { 
-    grid-area: mail;
-    line-height: 70px; }
-.whatzup { 
-    grid-area: whatzup;
-    line-height: 70px; }
-.about-us { 
-    grid-area: about-us;
-    text-align: justify;
-    padding: 15px; 
-    border-left: 1px solid white;
-    }
-.title { 
-    grid-area: title;
-    border-bottom: 2px solid white; } 
-    .flyingHeader {
-        position: fixed;
-        top: 0;
-        transition: 0.5s ease;
-        left: 0;
-        background-color: #f47e3e;
-        color: white;
-        z-index: 1000;
-    }
-    #mobileIcon {
-        display: none;
-        line-height: 59px;
-        padding: 0 20px 0 0;
-        cursor: pointer;
-        color: white;
-        }
-    .p{
-        width: 50%;
-        margin: 0 auto;
-        opacity: 0;
-        transition: 1.5s ease;
-        text-align: center;
-        color: #f47e3ebd;
-        background-color: white;
-    }
-    .flying {
-        margin: 20px auto;
-        width: 75%;
-        transition: 1s ease;
-        background-color: #f47e3ebd;
-        opacity: 1;
-        text-align: center;
-        border-radius: 10px;
-        color: white; 
-        box-shadow: 9px 4px 24px 0px #000000a9;
-        padding: 10px 10px 20px;
-    }
-    #heroSection {
-        text-align: center;
-        background-image: url(./166719356_127181476082490_5881049327626121667_n.jpg);
-        background-attachment: fixed;
-        background-position: bottom;
-    }
-    #heroSection img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        margin: 130px 0;
-        opacity: 0.8;
-    }
-    .grid-container-text {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.15fr 0.5fr;
-  gap: 10px 0px;
-  grid-template-areas:
-    "image image image image"
-    "text text text text";
-}
-.image { 
-    grid-area: image;
-     }
-.image img {
-        width: 80%;
-    }
-.text { grid-area: text; }
-.text p {
-    font-size: 14px;
-}
-  
-   footer{
-        width: 100%;
-        text-align: center;
-        color: white;
-        background-color: #f47e3ebd;
-        padding: 1px 0;
-        font-size: 12px;
-    }
-    footer  a {
-        text-decoration: none;
-    }
-    footer  a:link {
-        color: white;
-    }
-    footer  a:visited {
-        color: white;
-    }
-    footer  a:hover {
-        color: rgb(139, 129, 129);
-        border-bottom: rgb(139, 129, 129) ;
-    }
-    footer  a:active {
-        color: white;
-    }
-    @media screen and (min-width: 650px ) and (max-width: 970px ){
-        .grid-container {
-            grid-template-columns: 0.15fr 0.15fr 1fr;
-            grid-template-rows: 1fr;
-            gap: 2px 0px;
-            grid-template-areas:
-            "title title"
-            "phone-icon phone about-us"
-            "mail-icon mail about-us"
-            "whatzup-icon whatzup about-us";
-}
-.about-us { 
-    grid-area: about-us;
-    text-align: center;
-    padding: 15px;
-    border-left: none; 
-    font-size: 0.7em;}
-    
-    .text p {
-        font-size: 10px;
-    }
-    }
-    @media screen and (max-width: 650px){
-        #mobileIcon {
-        display: block;
-        line-height: 59px;
-        padding: 0 20px 0 0;
-        cursor: pointer;
-        color: white;
-        }
-        #mobileNav {
-            display: block;
-            background-color: white;
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 70%;
-            color: #f47e3ebd;
-            text-align: center;
-            padding: 40px 0;
-            z-index: 10000;
-            border-radius: 10px 0 10px 10px;
-        }
-        #mobileNav a {
-            display: block;
-            color: #f47e3ebd;
-            text-decoration: none;
-            margin: 30px 0;
-        }
-        header nav {
-            display: none;
-        }
-        #closeMobIcon {
-            opacity: 0;
-            display: none;
-            position: fixed;
-            right: 10px;
-            top: 20px;
-            font-size: 20px;
-            cursor: pointer;
-        }
-        .grid-container {
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            gap: 2px 0px;
-            grid-template-areas:
-            "title title"
-            "phone-icon phone"
-            "mail-icon mail"
-            "whatzup-icon whatzup"
-            "about-us about-us";
-}
-.about-us { 
-    grid-area: about-us;
-    text-align: center;
-    padding: 15px;
-    border-left: none; 
-    font-size: 0.7em;}
-    
-    .text p {
-        font-size: 10px;
-    }
-
-    }
-   
-</style>
 <body>
 
     <header id="header" class="header">
         
-        <h5>HU - Holističko Udruženje</h5>
+        <h6>HU - Holističko Udruženje</h6>
 
         <nav>
-            <a href="#aboutSection">About</a>
-            <a href="#contactSection">Contact</a>
+            <ul>
+                <li><a href="#aboutSection">Our Programs</a>
+                    <ul >
+                        <li><a href="#taekw">Taekwondo</a></li>
+                        <li><a href="#freq">Frekvencije</a></li>
+                        <li><a href="#reiki">Reiki</a></li>
+                        <li><a href="#shiatsu">Shiatsu Masaža</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="#contactSection">Contact</a></li>
+            </ul>
+            
+            
         </nav>
 
         <div id="mobileIcon"><i class="fas fa-bars"></i></div>
@@ -290,19 +41,112 @@
 
     <div id="mobileNav">
         <i id="closeMobIcon" class="fas fa-times"></i>
-        <a href="#aboutSection">About</a>
-        <a href="#contactSection">Contact</a>
+        <ul>
+            <li><a href="#aboutSection">Our Programs</a>
+                <div>
+                    <ul>
+                        <li><a class="mobile-list-item" href="#taekw">Taekwondo</a></li>
+                        <li><a class="mobile-list-item" href="#freq">Frekvencije</a></li>
+                        <li><a class="mobile-list-item" href="#reiki">Reiki</a></li>
+                        <li><a class="mobile-list-item" href="#shiatsu">Shiatsu Masaža</a></li>
+                    </ul>
+                </div>
+            </li>
+            
+            <li><a href="#contactSection">Contact</a></li>
+        </ul>
     </div>
 
     <section id="heroSection">
-        <img width="80%" src="./150259951_103570421776929_2724077694020280376_n.jpg" alt="heroImg">
+        <img width="80%" src="./img/150259951_103570421776929_2724077694020280376_n.jpg" alt="heroImg">
     </section>
 
     <section id="aboutSection" class="p">
 
-        <div class="grid-container-text">
+        <div id="freq" class="grid-container-text">
             <div class="image">
-                <img src="./177442387_138228531644451_8076211542833906296_n.jpg" alt="imgp">
+                <img src="./img/178588026_141768124623825_5726399201361551104_n.jpg" alt="imgp">
+            </div>
+            <div class="text">
+                <p>⭐️ NOVO / NEW ⭐️
+                    FREKVENCIJAMA NOVE TEHNOLOGIJE DO ZDRAVLJA!
+                    Upoznajte se sa najnaprednijom tehnologijom u službi očuvanja Vašeg zdravlja – LIFE BALANCE aparat.
+                    Zadatak LIFE BALANCE aparata je aktiviranje prirodnih mehanizama koji imaju za cilj obnavljanje i odrzavanje zdravlja.
+                    Uređaj prenosi elektromagnetne valove čija frekvencija rezonira sa frekvencijama različitih patogenih mikroorganizama i na taj način ih ubija.
+                    A najvažniji podatak jeste da su ovi elektromagnetni valovi apsolutno sigurni za ljudsko tijelo, nemaju nuspojave i mogu ih koristiti ljudi svih dobnih skupina!
+                    U roku od jedne minute dobijete izvještaj na osnovu skeniranja 47 organa i sistema u vašem tijelu. Ovaj izvještaj će vam reći mnoštvo stvari o vašem zdravlju, kao što su:
+                    • efikasnost lijekova koje uzimate;
+                    • bilo koje intolerancije na hranu od kojih možda patite;
+                    • određivanje fiziološke starosti;
+                    • automatska kompozicija pojedinačnog kompleksa za životnu ravnotežu;
+                    • I mnogi drugi podaci…
+                    Počastite sebe i svoje zdravlje sa terminom kod nas!
+                    ☎️ Kontaktirajte nas za više informacija, za zakazivanje termina i konsultacije na broj + 387 61 245 678
+                    .....
+                    FREQUENCIES OF NEW TECHNOLOGY TO A HEALTHY YOU!
+                    Get acquainted with the most advanced technology in the service of preserving your health - LIFE BALANCE device.
+                    The task of the LIFE BALANCE device is to activate natural mechanisms that aim to restore and maintain health.
+                    The device transmits electromagnetic waves whose frequency resonates with the frequencies of various pathogenic microorganisms and thus kills them.
+                    Most importantly, these electromagnetic waves are absolutely safe for the human body, have no need and can be used by people of all ages!
+                    Within one minute, a report is obtained based on a scan of 47 organs and systems in your body. This report will tell you a multitude of things about your health, such as:
+                    • the effectiveness of the medicines you are taking;
+                    • any food intolerances you may be suffering from;
+                    • determination of physiological age;
+                    • automatic composition of an individual complex for life balance;
+                    • And many others…
+                    Treat yourself and your health with an appointment with us!
+                    ☎️ Contact us for more information, for appointments and consultations at + 387 61 245 678</p>
+            </div>
+          </div>
+
+          <div id="taekw" class="grid-container-text">
+            <div class="image">
+                <img src="./img/178648573_141988344601803_3769348020518754542_n.jpg" alt="imgp">
+            </div>
+            <div class="text">
+                <p>RAZLOZI ZBOG KOJIH BI VAŠE DIJETE TREBALO TRENIRATI TAEKWONDO/
+                    The reasons your child should be trained by Taekwondo
+                    1. Povećanje tjelesne aktivnosti djeteta./
+                    Increasing child physical activity.
+                    2. Djeca se uče koncentraciji i mirnoći./
+                    Kids learn to concentrate and calm.
+                    3. Djeca će naučiti primiti “udarce”./
+                    Children will learn to take “hits."
+                    4. Dijete će razviti samopouzdanje i samopoštovanje./
+                    The child will develop confidence and self-esteem. 
+                    5. Dijete će naučiti kako “povezati” um i tijelo./Dijete će naučiti kako “povezati” um i tijelo.
+                    6. Učenje ispravnog rješavanja konfliktne situacije./
+                    Learning the right way to resolve the conflict situation.
+                    7. Vaše dijete će naučiti kako disat./
+                    Your child will learn how to breathe.</p>
+            </div>
+          </div>
+
+          <div id="reiki" class="grid-container-text">
+            <div class="image">
+                <img src="./img/176849882_138901294910508_4450673276439536857_n.jpg" alt="imgp">
+            </div>
+            <div class="text">
+                <p>REIKI je vrsta energetskog liječenja.
+                    Energetsko liječenje cilja na energetska polja oko tijela.
+                    Prema stručnjacima, energija može stagnirati u tijelu gdje je došlo do fizičkih ozljeda ili moguće emocionalne boli. Vremenom ovi energetski blokovi mogu uzrokovati bolest.
+                    Cilj energetske medicine je pomoći protoku energije i ukloniti blokove na sličan način kao akupunktura ili akupresura. Poboljšanje protoka energije oko tijela, kažu stručnjaci, može omogućiti opuštanje, smanjiti bol, ubrzati zacjeljivanje i smanjiti ostale simptome bolesti.
+                    Reiki pomaže u opuštanju, pomaže tijelu u prirodnim zacjeljivanju i razvija emocionalnu, mentalnu i duhovnu dobrobit. Takođe se navodi da potiče duboko opuštanje, pomaže ljudima da se nose sa poteškoćama, ublažava emocionalni stres i poboljšava opće dobro.
+                    Ljudi koji primaju reiki terapiju opisuju je kao „jako opuštajuću“.
+                    Zakažite i vi sebi REIKI tretman na broj + 387 61 245 678
+                    ……
+                    REIKI is a type of energy healing.
+                    Energy healing targets the energy fields around the body.
+                    According to practitioners, energy can stagnate in the body where there has been physical injury or possibly emotional pain. In time, these energy blocks can cause illness.
+                    Energy medicine aims to help the flow of energy and remove blocks in a similar way to acupuncture or acupressure. Improving the flow of energy around the body, say practitioners, can enable relaxation, reduce pain, speed healing, and reduce other symptoms of illness.
+                    Reiki is alleged to aid relaxation, assist in the body’s natural healing processes, and develop emotional, mental, and spiritual well-being.
+                    Schedule a REIKI treatment for yourself at + 387 61 245 678</p>
+            </div>
+          </div>
+
+        <div id="shiatsu" class="grid-container-text">
+            <div class="image">
+                <img src="./img/177442387_138228531644451_8076211542833906296_n.jpg" alt="imgp">
             </div>
             <div class="text">
                 <p>SHIATSU MASAŽA najbolja je za ljude koji se žele osjećati opušteno i ublažiti stres, bol i napetost. To je japanska vrsta masaže koja promovira emocionalnu i fizičku smirenost i opuštanje. pomaže u ublažavanju stresa, anksioznosti i depresije.
@@ -361,70 +205,7 @@
     
     
 
-    <script>
-
-        var header = document.getElementById("header");
-
-        var myFunc = function () {
-            let y = window.scrollY;
-            y>=1 ? header.className = "header flyingHeader" : header.className = "header";
-            
-        }
-
-        window.addEventListener("scroll", myFunc);
-
-        var p = document.querySelectorAll(".p");
-        var hero = document.getElementById("heroSection");
-        var heroHeight = hero.clientHeight;
-
-        for (let i = 0; i < p.length; i++) {
-            var pFunc = () => {
-            let x = window.scrollY;
-            x> heroHeight - 350 ? p[i].className = "flying" : p[i].className = "p";
-        }
-
-        
-        window.addEventListener("scroll", pFunc);
-        }
-
-        var mobButton = document.getElementById("mobileIcon");
-        var mobCloseButton = document.getElementById("closeMobIcon");
-        var mobileNav = document.getElementById("mobileNav");
-
-        var mobFunc = function () {
-            mobButton.style.transform = "rotate(180deg)";
-            mobileNav.style.right = "0";
-            mobileNav.style.transition = "1s ease";
-            mobButton.style.transition = "1s ease";
-            mobButton.style.opacity = "0";
-            mobCloseButton.style.display = "block";
-            mobCloseButton.style.opacity = "1";
-            mobCloseButton.style.transition = "1s ease";
-            
-        }
-        mobButton.addEventListener("click", mobFunc);
-
-        var closeFunc = function () {
-            mobileNav.style.right = "-100%";
-            mobileNav.style.transition = "1s ease";
-            mobCloseButton.style.display = "none";
-            mobButton.style.transform = "rotate(360deg)"
-            mobButton.style.opacity = "1";
-        }
-
-        mobCloseButton.addEventListener("click", closeFunc);
-
-        let copyrightText = document.getElementById("copyright");
-        
-
-        copyrightText.innerHTML += new Date().getFullYear();
-
-       
-        
-
-        
-
-    </script>
+   <script src="js/index.js"></script>
     
 </body>
 </html>

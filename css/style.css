@@ -1,0 +1,307 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+    background-color: #f47e3ebd;
+    background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: #f47e3e;
+    left: -100%;
+    padding: 0 0 0 10px;
+}
+header nav {
+    line-height: 36px;
+    font-size: 0.83em;
+}
+header nav ul {
+    padding-left: 0px;
+    margin-right: 10px;
+    display: flex;
+}
+header nav ul li {
+    list-style: none;
+    display: inline-flex;
+    position: relative;
+}
+header nav ul li ul {
+    padding-left: 0px;
+    position: absolute;
+    top: 37px;
+    left: -50px;
+    display: none;
+    width: 146px;
+    border-radius: 5px;
+}
+nav ul li:hover > ul {
+	display: block;
+    background-color: #f47e3e;
+    transition: 1s ease;
+    right: -19px;
+    display: flow-root;
+}
+header nav ul li a {
+    padding: 5px 10px;
+    text-decoration: none;
+}
+header nav ul li a:link {
+    
+    color: white;
+}
+header nav ul li a:visited {
+    color: white;
+}
+header nav ul li a:hover {
+    color: #eeb190d0;
+    cursor: pointer;
+}
+header nav ul li a:active{
+    color: white;
+}
+#mobileIcon {
+    display: none;
+}
+#mobileNav {
+    display: none;
+}
+.grid-container {
+display: grid;
+grid-template-columns: 0.35fr 0.35fr 4fr;
+grid-template-rows: 1fr 1fr 1fr 1fr;
+gap: 10px 30px;
+grid-template-areas:
+"title title title"
+"phone-icon phone about-us"
+"mail-icon mail about-us"
+"whatzup-icon whatzup about-us";
+}
+.phone-icon { 
+grid-area: phone-icon;
+line-height: 70px; }
+.mail-icon { 
+grid-area: mail-icon;
+line-height: 70px; }
+.whatzup-icon { 
+grid-area: whatzup-icon;
+line-height: 70px; }
+.phone { 
+grid-area: phone;
+line-height: 70px; }
+.mail { 
+grid-area: mail;
+line-height: 70px; }
+.whatzup { 
+grid-area: whatzup;
+line-height: 70px; }
+.about-us { 
+grid-area: about-us;
+text-align: justify;
+padding: 15px; 
+border-left: 1px solid white;
+}
+.title { 
+grid-area: title;
+border-bottom: 2px solid white; } 
+.flyingHeader {
+    position: fixed;
+    top: 0;
+    transition: 0.5s ease;
+    left: 0;
+    background-color: #f47e3e;
+    color: white;
+    z-index: 1000;
+}
+#mobileIcon {
+    display: none;
+    line-height: 59px;
+    padding: 0 20px 0 0;
+    cursor: pointer;
+    color: white;
+    }
+.p{
+    width: 50%;
+    margin: 0 auto;
+    opacity: 0;
+    transition: 1.5s ease;
+    text-align: center;
+    color: #f47e3ebd;
+    background-color: white;
+}
+.flying {
+    margin: 20px auto;
+    width: 75%;
+    transition: 1s ease;
+    background-color: #f47e3ebd;
+    opacity: 1;
+    text-align: center;
+    border-radius: 10px;
+    color: white; 
+    box-shadow: 9px 4px 24px 0px #000000a9;
+    padding: 10px 10px 20px;
+}
+#heroSection {
+    text-align: center;
+    background-image: url(../img/166719356_127181476082490_5881049327626121667_n.jpg);
+    background-attachment: fixed;
+    background-position: bottom;
+}
+#heroSection img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 130px 0;
+    opacity: 0.8;
+}
+.grid-container-text {
+    padding: 20px 0;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-rows: 0.15fr 0.5fr;
+gap: 10px 0px;
+grid-template-areas:
+"image image image image"
+"text text text text";
+}
+.image { 
+grid-area: image;
+ }
+.image img {
+    width: 80%;
+}
+.text { grid-area: text; }
+.text p {
+font-size: 14px;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: #f47e3ebd;
+    padding: 1px 0;
+    font-size: 12px;
+}
+footer  a {
+    text-decoration: none;
+}
+footer  a:link {
+    color: white;
+}
+footer  a:visited {
+    color: white;
+}
+footer  a:hover {
+    color: rgb(139, 129, 129);
+    border-bottom: rgb(139, 129, 129) ;
+}
+footer  a:active {
+    color: white;
+}
+@media screen and (min-width: 650px ) and (max-width: 970px ){
+    .grid-container {
+        grid-template-columns: 0.15fr 0.15fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 2px 0px;
+        grid-template-areas:
+        "title title"
+        "phone-icon phone about-us"
+        "mail-icon mail about-us"
+        "whatzup-icon whatzup about-us";
+}
+.about-us { 
+grid-area: about-us;
+text-align: center;
+padding: 15px;
+border-left: none; 
+font-size: 0.7em;}
+
+.text p {
+    font-size: 10px;
+}
+}
+@media screen and (max-width: 650px){
+    #mobileIcon {
+    display: block;
+    line-height: 59px;
+    padding: 0 20px 0 0;
+    cursor: pointer;
+    color: white;
+    }
+    #mobileNav {
+        display: block;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        color: #f47e3ebd;
+        text-align: right;
+        padding: 40px 0;
+        z-index: 10000;
+        border-radius: 10px 0 10px 10px;
+        padding-bottom: 54px;
+    }
+    #mobileNav ul {
+        list-style: none;
+        padding-right: 15px;
+    }
+    #mobileNav ul li div ul {
+        padding-left: 0px;
+        position: absolute;
+        top: -21px;
+        left: 20px;
+        display: none;
+        list-style: none;
+    }
+    #mobileNav ul li:hover > div ul {
+        display: block;
+        transition: 1s ease;
+        right: 170px;
+        display: block;
+    }
+    #mobileNav a {
+        display: block;
+        color: #f47e3ebd;
+        text-decoration: none;
+        margin: 30px 0;
+    }
+    header nav {
+        display: none;
+    }
+    #closeMobIcon {
+        opacity: 0;
+        display: none;
+        position: fixed;
+        right: 10px;
+        top: 20px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 2px 0px;
+        grid-template-areas:
+        "title title"
+        "phone-icon phone"
+        "mail-icon mail"
+        "whatzup-icon whatzup"
+        "about-us about-us";
+}
+.about-us { 
+grid-area: about-us;
+text-align: center;
+padding: 15px;
+border-left: none; 
+font-size: 0.7em;}
+
+.text p {
+    font-size: 10px;
+}
+
+}
